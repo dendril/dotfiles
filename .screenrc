@@ -1,6 +1,12 @@
 # Disable the startup message
 startup_message off
 
+# Set a large scrollback buffer
+defscrollback 32000
+
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
+
 # Show terminals in a tab way
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
