@@ -39,5 +39,7 @@ export JRE_HOME=$JAVA_HOME
 export M2_HOME=$(brew --prefix maven)/libexec/
 export M2=$M2_HOME/bin
 
-# Add $M2 to path
-# export PATH=$M2:$PATH
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
+export GPG_TTY=$(tty);
+
